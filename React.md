@@ -150,9 +150,9 @@ React内部应该是维护了一个待更新队列，当我们调用setState，�
 我们可以向待更新队列中放入回调函数，也就是调用setState时传入的参数是一个函数.
 这样React只有在真正更新组件的时候，才会执行该回调函数，此时函数执行拿到的一定是最新的值。
 function add() {
-  this.setState(() => {
+  this.setState(() => ({
     count: this.state + 1
-  });
+  }));
 }
 ```
 
@@ -185,7 +185,33 @@ function add() {
 ### JSX中的this
 ```你必须谨慎对待 JSX 回调函数中的 this，在 JavaScript 中，class 的方法默认不会绑定 this。
 如果你忘记绑定 this.handleClick 并把它传入了 onClick，当你调用这个函数的时候 this 的值为 undefined。
+
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // 为了在回调中使用 `this`，这个绑定是必不可少的
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(() => ({isToggleOn: !this.state.isToggleOn}));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+
+ReactDOM.render(<Toggle />, document.getElementById('root'));
 ```
+
+
 
 
 
