@@ -42,7 +42,42 @@ class Welcome extends React.Component {
   }
 }
 ```
+### 渲染组件
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
 
+const element = <Welcome name="Sara" />;
+ReactDOM.render(element, document.getElementById('root'));
+
+这段代码会在页面上渲染 “Hello, Sara”
+React 调用 Welcome 组件，并将 {name: 'Sara'} 作为 props 传入
+
+const element = <Welcome name='Sara' />; 等价于
+const element = Welcome({name: 'Sara'});
+```
+注意点：
+1.  `组件名称必须以大写字母开头`
+2.  name="xxx" 非 name: "xxx"
+3.  参数基本类型必须是string 比如 age="12"
+4.  `组件无论是使用函数声明还是通过 class 声明，都决不能修改自身的 props, 所有 React 组件都必须像纯函数一样保护它们的 props 不被更改`
+
+### 组合组件
+```
+function Welcome(props) {
+  return <h1>Hello {props.name}</h1>
+}
+
+function App() {
+  return (
+    <Welcome name="xiaohong">
+    <Welcome name="xiaohei">
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
 
 
 
