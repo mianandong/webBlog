@@ -60,7 +60,7 @@ const element = Welcome({name: 'Sara'});
 注意点：
 1.  `组件名称必须以大写字母开头`
 2.  name="xxx" 非 name: "xxx"
-3.  参数基本类型必须是string 比如 age="12"
+3.  参数基本类型必须是string 比如 age="12"，或者age={12}
 4.  `组件无论是使用函数声明还是通过 class 声明，都决不能修改自身的 props, 所有 React 组件都必须像纯函数一样保护它们的 props 不被更改`
 
 ### 组合组件
@@ -182,6 +182,15 @@ function add() {
 - 使用 JSX 语法时你需要传入一个函数作为事件处理函数，而不是一个字符串。
 ```
 
+### 向事件处理函数传递参数
+```
+通常我们会为事件处理函数传递额外的参数。
+例如，若 id 是你要删除那一行的 ID，以下两种方式都可以向事件处理函数传递参数：
+
+<button onClick={() => this.deleteRow(this.id)}>Delete Row</button>
+<button onClick={this.deleteRow.bind(this, this.id)}>Delete Row</button>
+```
+
 ### JSX中的this
 ```你必须谨慎对待 JSX 回调函数中的 this，在 JavaScript 中，class 的方法默认不会绑定 this。
 如果你忘记绑定 this.handleClick 并把它传入了 onClick，当你调用这个函数的时候 this 的值为 undefined。
@@ -209,6 +218,51 @@ class Toggle extends React.Component {
 }
 
 ReactDOM.render(<Toggle />, document.getElementById('root'));
+```
+### React组件条件渲染
+```
+根据条件，只渲染对应状态下的React组件部分内容
+
+render() {
+    const isLoggedIn = this.state.isLoggedIn;
+    let button;
+    if (isLoggedIn) {
+      button = <LogoutButton onClick={this.handleLogoutClick} />;
+    } else {
+      button = <LoginButton onClick={this.handleLoginClick} />;
+    }
+
+    return (
+      <div>
+        {button}
+      </div>
+    );
+  }
+  
+或者这样写
+render() {
+  const isLoggedIn = this.state.isLoggedIn;
+  return (
+    <div>
+      {isLoggedIn
+        ? <LogoutButton onClick={this.handleLogoutClick} />
+        : <LoginButton onClick={this.handleLoginClick} />
+      }
+    </div>
+  );
+}
+```
+### 列表 & Key
+当创建列表React元素时，要显式的为每一项指定key
+
+### 受控组件
+了解
+
+### 状态提升
+```
+说白了就是将多个子组件都会用到的状态值state在父组件中定义。
+然后在父组件中再定义一系列操作state的函数，通过props传递给子组件state和操作state的函数，
+以便子组件可以更新状态。
 ```
 
 
