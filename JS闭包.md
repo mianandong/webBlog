@@ -35,6 +35,7 @@ function makeSizer(size) {
 document.getElementById('size-12').onclick = makeSizer(12);
 document.getElementById('size-14').onclick = makeSizer(14);
 document.getElementById('size-16').onclick = makeSizer(16);
+
 ```
 
 ### 模拟私有方法
