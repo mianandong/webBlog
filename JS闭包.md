@@ -54,7 +54,7 @@ var makePerson = function(){
 
 var person = makePerson();
 person.setName('xuwei');
-person.get(Name); // xuwei
+person.getName(); // xuwei
 
 其他方式无法访问name属性，起到了数据隐藏和封装的好处
 ```
