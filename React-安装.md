@@ -119,7 +119,7 @@ test.html
   </head>
   <body>
     <div id="root"></div>
-    <script>
+    <script type="text/babel">
       class MyButton extends React.Component {
         render() {
           return (
@@ -133,6 +133,10 @@ test.html
     </script>
   </body>
 </html>
+
+一定要注意：
+在 <script> 标签内使用 JSX，要为其添加 type="text/babel" 属性。
+只有添加这个属性，babel才知道它需要去处理这个脚本。
 ```
 
 
