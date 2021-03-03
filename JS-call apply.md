@@ -3,7 +3,7 @@ call 和 apply 都是为了改变某个函数运行时的 context 即上下文�
 call 和 apply二者的作用完全一样，只是接受参数的方式不太一样。
 ```
 
-##作用
+## 作用
 ### 改变this指向
 ```js
 var name = 'xuwei';
