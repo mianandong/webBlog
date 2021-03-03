@@ -100,13 +100,13 @@ test.html
   </body>
 ```
 ```
-显然，使用JSX的方式编写UI代码更方便。
+显然，使用JSX的方式编写UI代码更方便。 
 但是浏览器原生并不支持JSX语法，在项目中尝试 JSX 最快的方法是在页面中添加这个 <script> 标签
 
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 ```html
-完成代码如下所示：
+完整代码如下所示：
 
 <!DOCTYPE html>
 <html>
@@ -139,8 +139,19 @@ test.html
 只有添加这个属性，babel才知道它需要去处理这个脚本。
 ```
 
+### Create React App
+https://github.com/facebook/create-react-app
 
+```
+一组JavaScript构建工具链通常由这些组成：
 
+一个package管理器， 比如 npm 或 yarn 。 它能让你充分利用庞大的第三方 package 的生态系统，并且轻松地安装或更新它们。
+一个打包器，        比如 webpack 或 Parcel。它能让你编写模块化代码，并将它们组合在一起成为小的 package，以优化加载时间。
+一个编译器，        比如 Babel。它能让你编写的新版本 JavaScript 代码，在旧版浏览器中依然能够工作。
+```
+```
+Create React App 已经帮你把这些都准备好了。
+```
 
 
 
