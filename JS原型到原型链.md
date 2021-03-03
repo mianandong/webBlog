@@ -29,7 +29,7 @@ person1.__proto__ === Person.prototype // true
 person2.__proto__ === Person.prototype // true
 ```
 
-### 原型对象的 constructor 指向构造函数
+### `原型对象的 constructor 指向构造函数`
 
  ```js
 person1.__proto__.constructor === Person // true
@@ -44,7 +44,7 @@ person1.__proto__.__proto__ === obj1.__proto__ // true
 person2.__proto__.__proto__ === obj1.__proto__ // true
 person1.__proto__.__proto__ === obj2.__proto__ // true
 ```
-### 原型链
+### `原型链`
 ```
 由上图可以看出来，原型对象通过 __proto__ 连接起来，形成了一条链，俗称“原型链”
 原型链的作用：
