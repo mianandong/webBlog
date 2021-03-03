@@ -50,4 +50,8 @@ function Cat(name){
 
 var cat = new Cat("Black Cat");  
 cat.showName(); //Black Cat
+
+如果你不是new Cat而是直接
+Cat('Baba');
+则 window.name = 'Baba'; window.showName(); // 'Baba'
 ```
