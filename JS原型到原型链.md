@@ -2,9 +2,10 @@
 首先说明三个概念
 构造函数，实例对象，原型对象。
 
-构造函数中有效属性是  prototype
-实例对象中有效属性是  __proto__
-原型对象中有效属性是  constructor  __proto__
+构造函数中相关属性是  prototype
+实例对象中相关属性是  __proto__
+原型对象中相关属性是  constructor  __proto__
+
 
 function Person() {
 }
@@ -15,13 +16,34 @@ var obj1 = new Object();
 var obj2 = new Object();
 ```
 
+```
+构造函数 Person
+实例对象 person1 person2
+原型对象 person1.__proto__ 或者 Person.prototype
+```
+
 ### 构造函数的 prototype 与实例对象的 __proto__ 指向同一个对象，即原型对象。
+
+```js
+person1.__proto__ === Person.prototype // true
+person2.__proto__ === Person.prototype // true
+```
 
 ### 原型对象的 constructor 指向构造函数
 
+ ```js
+person1.__proto__.constructor === Person // true
+person2.__proto__.constructor === Person // true
+Person.prototype.constructor === Person //true
+ ```
+
 ### 原型对象的 __proto__ 指向原型对象的原型对象，即Object的原型对象。
 
-
+```js
+person1.__proto__.__proto__ === obj1.__proto__ // true
+person2.__proto__.__proto__ === obj1.__proto__ // true
+person1.__proto__.__proto__ === obj2.__proto__ // true
+```
 ### 原型链
 ```
 由上图可以看出来，原型对象通过 __proto__ 连接起来，形成了一条链，俗称“原型链”
