@@ -22,7 +22,7 @@ var obj2 = new Object();
 原型对象 person1.__proto__ 或者 Person.prototype
 ```
 
-### 构造函数的 prototype 与实例对象的 __proto__ 指向同一个对象，即原型对象。
+### `构造函数的 prototype 与实例对象的 __proto__ 指向同一个对象，即原型对象。`
 
 ```js
 person1.__proto__ === Person.prototype // true
@@ -37,7 +37,7 @@ person2.__proto__.constructor === Person // true
 Person.prototype.constructor === Person //true
  ```
 
-### 原型对象的 __proto__ 指向原型对象的原型对象，即Object的原型对象。
+### `原型对象的 __proto__ 指向原型对象的原型对象，即Object的原型对象。`
 
 ```js
 person1.__proto__.__proto__ === obj1.__proto__ // true
