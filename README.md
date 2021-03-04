@@ -8,6 +8,11 @@
 [JS-原型到原型链](./JS/JS-原型到原型链.md)  
 [JS-call-apply-bind](./JS/JS-call-apply-bind.md)  
 [JS-this](./JS/JS-this.md)  
+[JS-防抖](./JS/JS-防抖.md)
+[JS-节流](./JS/JS-节流.md)
+[JS-类型判断](./JS/JS-类型判断.md)
+[JS-深浅拷贝](./JS/JS-实现深拷贝和浅拷贝.md)
+[JS-数组](./JS/JS-数组.md)
 ## React系列
 [React-安装](./React/React-安装.md)  
 [React-核心概念](./React/React-核心概念.md)  
