@@ -53,7 +53,7 @@ var cat = new Cat("Black Cat");
 cat.showName(); //Black Cat
 ```
 ```
-如果你不是new Cat而是直接调用函数
+如果不是new Cat而是直接调用函数
 Cat('Baba');
 则this指向的是window
 window.showName(); // 'Baba'
@@ -81,5 +81,20 @@ func1();    // xuwei
 bind 方法不会立即执行，而是返回一个改变了上下文 this 后的函数。
 而原函数 func 中的 this 并没有被改变，依旧指向全局对象 window。
 ```
+## call实现原理
+```js
+Function.prototype.myCall = function (context) {
+  if (typeof this !== 'function') {
+    throw new TypeError('not funciton');
+  }
+  context = context || window;
+  context.fn = this;
+  let arg = [...arguments].slice(1);
+  let result = context.fn(...arg);
+  delete context.fn;
+  return result;
+}
 
+其实实现这种方法的本质是 => 将要改变this指向的方法挂到目标this上执行并返回
+```
 
