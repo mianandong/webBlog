@@ -1,5 +1,9 @@
 ## 虚拟DOM
 ```js
+
+所谓虚拟DOM，就是用JS的object对象模拟DOM中的真实节点对象。
+再通过特定的render方法将其渲染成真实的DOM节点
+
 当ReactDOM.render被调用时，底层调用React.createElement，返回以下对象：
 
 <div className='cn'>
@@ -24,7 +28,8 @@
 
 ## diff算法
 ```
-讲到diff算法，这就涉及到了React更新组件的逻辑。
+DOM Diff就是比较两个虚拟DOM的区别，本质上就是对比两个对象的区别。
+
 React更新组件不是从头开始创建所有DOM节点并将其放在页面上，
 而是根据虚拟DOM对象的属性，来确定节点树的哪些部分必须更新，哪些可以保持不变。
 主要有以下几种场景：
