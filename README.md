@@ -1,4 +1,4 @@
-# reStudy
+# WebStudy
 ## 学习笔记
 
 ## JS系列
