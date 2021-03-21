@@ -37,3 +37,4 @@
 ## Browser系列
 [Browser-缓存机制](./Browser/Browser-缓存机制.md)  
 [Browser-存储机制](./Browser/Browser-存储机制.md)  
+[Browser-渲染原理](./Browser/Browser-渲染原理.md)   
