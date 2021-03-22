@@ -30,6 +30,7 @@ div {
 + 50px (左 + 右边框)
 + 50px (左 + 右边距)
 = 450px
+```
 
 ## box-sizing
 ```
@@ -49,6 +50,6 @@ inherit：规定应从父元素继承box-sizing属性的值。
 
 ## 参考资料
 ```
-CSS盒子模型总结_码厩-CSDN博客_css盒子模型
+CSS盒子模型总结_码厩-CSDN博客_css盒子模型  
 https://blog.csdn.net/qq_34966814/article/details/82872971
 ```
