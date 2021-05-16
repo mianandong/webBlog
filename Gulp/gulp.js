@@ -188,3 +188,36 @@ gulp.task('server', function() {
  * 即修改文件保存后，会自动执行相应task，server也会自动刷新
  */
 gulp.task('default', ['watch', 'server']);
+
+
+/**
+ * gulp组合任务
+ */
+
+/**
+ * Gulp 提供了两个强大的组合方法： series() 和 parallel()，允许将多个独立的任务组合为一个更大的操作。
+ * 这两个方法都可以接受任意数目的task，函数，已经组合的操作。
+ * series() 和 parallel() 可以互相嵌套至任意深度。
+ * 
+ * 如果需要让任务（task）按顺序执行，请使用 series() 方法。
+ * 如果需要以最大并发来运行的任务（tasks），可以使用 parallel() 方法将它们组合起来。
+ */
+ const { series } = require('gulp');
+
+ gulp.task('transpile', function() {
+     console.log('transpile');
+ })
+
+ gulp.task('bundle', function() {
+     console.log('bundle');
+ })
+ 
+ gulp.task('clean', function() {
+    console.log('clean');
+ })
+
+ gulp.task('series', series('transpile', 'bundle'))
+
+ const { parallel } = require('gulp');
+
+ gulp.task('combine-series-parallel', series('clean', parallel('transpile', 'bundle')))
