@@ -11,6 +11,11 @@ https://blog.csdn.net/u013069892/article/details/83147239
 
 
 
+commmand + shift + F  左侧搜索
+command + shift + E 左侧文件
+shift + 左右 逐个选中
+command + shift + 左右 整行选中
+option + space 代码提示
 
 
 
