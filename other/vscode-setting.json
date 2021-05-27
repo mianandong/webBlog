@@ -1,57 +1,62 @@
 {
-    "workbench.colorTheme": "One Monokai",
-    "window.zoomLevel": 0,
-    "editor.fontSize": 16,
-    "open-in-browser.default": "chrom",
-    "workbench.statusBar.feedback.visible": false,
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.cursorStyle": "line",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace,'Meslo LG M for Powerline'",
-    "explorer.confirmDelete": false,
-    "editor.minimap.enabled": false,
-    "git.autofetch": true,
-    "git.enableSmartCommit": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.iconTheme": "vscode-icons",
-    "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "vsicons.dontShowNewVersionMessage": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "explorer.confirmDragAndDrop": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "beautify.language": {
-        "js": {
-            "type": ["javascript", "json", "jsonc"],
-            "filename": [".jshintrc", ".jsbeautifyrc"]
-        },
-        "css": ["css", "less", "scss"],
-        "html": ["htm", "html"]
-    },
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "all",
-    "auto-close-tag.fullMode": true,
-    "auto-close-tag.SublimeText3Mode": true,
-    "files.associations": {
-        "*.js": "javascriptreact"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": true,
-    "prettier.tabWidth": 4,
-    "prettier.singleQuote": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.jsxBracketSameLine": true,
-    "[json]": {
-        "editor.quickSuggestions": {
-            "strings": true
-        },
-        "editor.suggest.insertMode": "replace",
-        "gitlens.codeLens.scopes": ["document"]
-    }
+  "workbench.colorTheme": "One Monokai",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 16,
+  "open-in-browser.default": "chrom",
+  "workbench.statusBar.feedback.visible": false,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorStyle": "line",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace,'Meslo LG M for Powerline'",
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.iconTheme": "vscode-icons",
+  "[html]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "beautify.language": {
+      "js": {
+          "type": ["javascript", "json", "jsonc"],
+          "filename": [".jshintrc", ".jsbeautifyrc"]
+      },
+      "css": ["css", "less", "scss"],
+      "html": ["htm", "html"]
+  },
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "auto-close-tag.fullMode": true,
+  "auto-close-tag.SublimeText3Mode": true,
+  "files.associations": {
+      "*.js": "javascriptreact"
+  },
+  "[javascriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "prettier.tabWidth": 4,
+  "prettier.singleQuote": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.jsxBracketSameLine": true,
+  "[json]": {
+  
+      "editor.quickSuggestions": {
+          "strings": true
+      },
+      "editor.suggest.insertMode": "replace",
+      "gitlens.codeLens.scopes": ["document"]
+},
+"files.autoSave": "onFocusChange",
+"cSpell.userWords": [
+    "xuwei"
+]
 }

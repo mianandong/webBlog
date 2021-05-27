@@ -168,7 +168,7 @@ app.use(fn());
 
 app.use('/static', express.static(__dirname, 'public'));
 
-基于此，所有url中携带staitc的请求都会经过该中间件处理
+基于此，所有url中携带static的请求都会经过该中间件处理
 此时静态资源的链接就变为了
 
 http://localhost:3000/static/css/style.ss
