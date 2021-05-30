@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Client</title>
+</head>
+
+<body>
+    <button onclick="getData()">获取数据</button>
+</body>
+<script>
+    function getData() {
+        const query = `
+            query Student($id: ID!) {
+                student(id: $id) {
+                    id
+                    age
+                }
+            }
+        `;
+
+        const variables = { id: '1234' };
+
+        fetch('/graphql', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                query: query,
+                variables: variables
+            })
+        }).then(res => res.json())
+            .then(json => console.log(json))
+    }
+</script>
+
+</html>
