@@ -17,6 +17,11 @@ http://www.duocaichajian.com/plugin/47.html
 vscode代码失焦自动保存
 vscode代码保存自动格式化
 vscode代码依赖自动导入
+commmand + shift + F  左侧搜索
+command + shift + E 左侧文件
+shift + 左右 逐个选中
+command + shift + 左右 整行选中
+option + space 代码提示
 
 command + shift + F     左侧搜索
 command + shift + E     左侧文件
