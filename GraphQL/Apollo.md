@@ -77,6 +77,29 @@ GraphQL服务器如果需要从另一个REST API风格的服务器获取数据�
 
 > 学完之后发现，这个dataSources其实和egg.js中的server功能是一样的，就是在业务逻辑与数据库操作之间添加一层适配层
 
-```
+我们在创建ApolloServer时声明`dataSources`  
+之后我们就可以在解析器参数的`context`中解构出 dataSources 使用
+```js
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  dataSources: () => {
+    return {
+      moviesAPI: new MoviesAPI(),
+      personalizationAPI: new PersonalizationAPI(),
+    };
+  }
+});
 
+Query: {
+    movie: async (_source, { id }, { dataSources }) => {
+      return dataSources.moviesAPI.getMovie(id);
+    },
+    mostViewedMovies: async (_source, _args, { dataSources }) => {
+      return dataSources.moviesAPI.getMostViewedMovies();
+    },
+    favorites: async (_source, _args, { dataSources }) => {
+      return dataSources.personalizationAPI.getFavorites();
+    },
+  },
 ```
