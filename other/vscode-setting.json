@@ -1,7 +1,6 @@
 {
-  "workbench.colorTheme": "One Monokai",
-  "window.zoomLevel": 0,
-  "editor.fontSize": 16,
+    "window.zoomLevel": 0,
+    "editor.fontSize": 16,
   "open-in-browser.default": "chrom",
   "workbench.statusBar.feedback.visible": false,
   "terminal.external.osxExec": "iTerm.app",
@@ -14,7 +13,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "vscode-icons",
   "[html]": {
-      "editor.defaultFormatter": "HookyQR.beautify"
+      "editor.defaultFormatter": "vscode.html-language-features"
   },
   "vsicons.dontShowNewVersionMessage": true,
   "editor.suggestSelection": "first",
@@ -49,6 +48,7 @@
   "prettier.jsxBracketSameLine": true,
   "[json]": {
   
+
       "editor.quickSuggestions": {
           "strings": true
       },
@@ -57,6 +57,11 @@
 },
 "files.autoSave": "onFocusChange",
 "cSpell.userWords": [
+    "datasource",
+    "dispath",
+    "graphiql",
     "xuwei"
-]
+],
+"editor.occurrencesHighlight": false,
+"editor.selectionHighlight": false
 }
