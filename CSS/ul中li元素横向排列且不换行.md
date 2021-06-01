@@ -10,9 +10,9 @@
 #pic_list
 {
 display:block;
-white-space:nowrap;
 width:500px;
-overflow:auto;
+white-space:nowrap;  // import 
+overflow:auto; // import
 }
 #pic_list li
 {
@@ -20,7 +20,7 @@ width:80px;
 height:80px;
 margin:3px;
 background:red;
-display:inline-block;
+display:inline-block; // import
 }
 </style>
  
