@@ -19,9 +19,10 @@ xxx/goods/v1/discount?xxxx
 
 ## 实现的大致原理
 ```
-server: 每一个 GraphQL 服务都会定义一套类型，用以描述你可能从那个服务查询到的数据。
-每当查询到来，服务器就会根据 schema 验证并执行查询。
-client: 正常发送http请求，只是body体格式要符合graphql的规定，这样服务器才能解析。
+server: 定义了数据的接口声明（typeDefs）和获取每个数据的方法（resolvers）, client要啥给啥，不再有业务相关的逻辑。
+client: 在请求的body体中告知服务器需要哪些数据。
+本质上讲，简化了服务器逻辑，将业务的逻辑全部交给了client
+同时为了满足client复杂的数据请求，GraphQL又定义了一系列的语法，比如变量，片段，参数，别名。来满足和简化client端发送的请求
 ```
 
 ## GraphQL的实现方式
