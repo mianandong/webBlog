@@ -14,8 +14,14 @@ app.get('/list', (req, res, next) => {
     next();
 })
 
-app.use((req, res, next) => {
-    res.send('xxxxx');
+app.use(["/*"], (req, res, next) => {
+    throw new Error('throw error')
+    res.send('error');
+});
+
+app.use((err, req, res, next) => {
+    console.log('5000')
+    res.send('500');
 })
 
 app.listen(3000);
