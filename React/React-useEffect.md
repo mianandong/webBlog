@@ -1,5 +1,5 @@
 As you know, useEffect第二个参数可以在指定变量变化时才触发回调。
-此时有两种情况：
+此时有三种情况：
 1. 此变量为普通变量
 
 ```js
@@ -49,3 +49,32 @@ const Post = () => {
 
 ```
 ![](2021-07-03-11-13-21.png)
+
+3. 此变量为useRef变量
+
+```js
+const Post = () => {
+    usePrintComponentState('Post');
+
+    const num = useRef(1);
+
+    useEffect(() => {
+        console.log("useEffect", num.current);
+    }, [num])
+
+    setInterval(() => {
+        num.current += 1;
+        console.log("timer", num.current);
+    }, 1000);
+
+    return (
+        <div>
+            <h2>Post</h2>
+        </div>
+    );
+}
+```
+
+同情况1，也是不会触发回调
+
+![](2021-07-03-11-29-39.png)
