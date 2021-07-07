@@ -45,3 +45,8 @@ git rebase -i 69f6da8dca9421eca19cd0daceecca433262917b
 // 将当前分支的HEAD重置为远端master分支的HEAD
 git reset origin/master --hard
 ```
+
+
+```
+gco -b originBrandName
+```
