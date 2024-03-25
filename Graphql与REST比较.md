@@ -16,3 +16,8 @@ web client 如果使用REST API请求，基于REST的特性，那client就要发
 graphql service通过请求不同的REST API来组装数据，所以更像是view modal层。
 
 所以总结来说，如果是面向web端的，推荐使用 graphql, 如果是供其他后端系统调用获取数据的，推荐使用REST API。
+
+
+## Graphql的缺点
+1. 前期的搭建成本会大些，对于开发人员有学习成本。对于REST API来说，直接引用axios发送请求即可。但是对于Graphql，要引用graphql相关的package，创建graphql实例。
+2. 默认使用http post，所以对于缓存，需要在创建graphql client 或 发送 query时指定，又进一步增加了学习成本。
